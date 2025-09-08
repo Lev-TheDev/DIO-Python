@@ -61,9 +61,14 @@ for i in range(1, contador+1):
 
 texto = input("Digite um texto: ")
 VOGAIS = "AEIOU"
+vogais_encontradas = ""
+
 for letra in texto:
     if letra.upper() in VOGAIS:
-        print(letra.upper(), end="-")
+        vogais_encontradas += letra.upper() + "-"
+if vogais_encontradas:
+    print(vogais_encontradas.rstrip("-"))
+        
 print()
 
 # tabuada
@@ -73,4 +78,4 @@ for i in range(1, 11):
 
 # tabuada do 5
 for numero in range(0, 51, 5):
-    print(numero, end=" ")
+    print(numero, end=", ")
